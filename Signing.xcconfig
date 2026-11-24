@@ -1,0 +1,20 @@
+// TABFLOW for iPhone and iPad: identity and signing, used by both targets (TABFLOW and TABFLOW Extension).
+//
+// The owner's team is committed below. Xcode Cloud (App Store Connect) only sees the repository, and without a team
+// it archives "signed to run locally", which cannot be exported for App Store, Ad Hoc or Development distribution.
+// The Simulator needs no team. To build with a different team or bundle identifier on your own Mac, put them in
+// Signing.local.xcconfig, next to this file. That file is not committed (.gitignore) and overrides the values below:
+//
+//     DEVELOPMENT_TEAM = ABCDE12345
+//     TABFLOW_BUNDLE_ID = com.yourname.TABFLOW
+//
+// DEVELOPMENT_TEAM: your 10-character team id (Xcode → Settings → Accounts, or developer.apple.com → Membership).
+// TABFLOW_BUNDLE_ID: optional. Use the identifier of an iPhone build you already installed to replace that app in
+// place and keep its signing; leave it out to use the default below. The extension is always <id>.Extension.
+// Do not set the team or the identifiers in Xcode's Signing & Capabilities pane: that writes them into the project file.
+
+TABFLOW_BUNDLE_ID = dev.tabflow.TABFLOW
+CODE_SIGN_STYLE = Automatic
+DEVELOPMENT_TEAM = 64P24835P8
+
+#include? "Signing.local.xcconfig"
